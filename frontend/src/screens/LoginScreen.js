@@ -18,7 +18,7 @@ function App() {
       // should be same as the id of the container
       containerID: "sawo-container",
       // can be one of 'email' or 'phone_number_sms'
-      identifierType: "email",
+      identifierType: "phone_number_sms",
       // Add the API key
       apiKey: "505fb96a-b8bf-4585-9bf7-bc07a0bfa255",
       // Add a callback here to handle the payload sent by sdk
