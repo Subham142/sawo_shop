@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Sawo from "sawo";
-import {Card} from 'react-bootstrap'
 import styles from "./styles"
 // import styles from "./styles"
 
