@@ -21,7 +21,7 @@ function App() {
       // can be one of 'email' or 'phone_number_sms'
       identifierType: "phone_number_sms",
       // Add the API key
-      apiKey: "3cd03d45-468b-4a01-902c-97b678143caf",
+      apiKey: "505fb96a-b8bf-4585-9bf7-bc07a0bfa255",
       // Add a callback here to handle the payload sent by sdk
       onSuccess: onSuccessLogin
     };
