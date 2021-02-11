@@ -2,6 +2,7 @@ import React from 'react'
 import {LinkContainer } from 'react-router-bootstrap';
 import {Nav,Navbar,Container} from 'react-bootstrap';
 const Header = () => {
+  const email = localStorage.getItem('userId').split("@",1);
     return (
         <header>
     <Navbar bg="dark" variant='dark' expand="lg" collapseOnSelect>
@@ -19,6 +20,9 @@ const Header = () => {
 
     <LinkContainer to="/login">
       <Nav.Link ><i className='fas fa-user'></i> Sign In</Nav.Link>
+      </LinkContainer>
+      <LinkContainer to="/login">
+      <Nav.Link ><i className='fas fa-user'></i> {email}</Nav.Link>
       </LinkContainer>
       </Nav>
     

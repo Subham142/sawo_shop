@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Sawo from "sawo";
 import styles from "./styles"
-// import styles from "./styles"
 
-function App() {
+//for redirecting to home page
+import { useHistory } from "react-router-dom";
+
+function LoginScreen() {
 
   // state values
   const [userPayload, setUserPayload] = useState({})
@@ -18,7 +20,7 @@ function App() {
       // should be same as the id of the container
       containerID: "sawo-container",
       // can be one of 'email' or 'phone_number_sms'
-      identifierType: "phone_number_sms",
+      identifierType: "email",
       // Add the API key
       apiKey: "505fb96a-b8bf-4585-9bf7-bc07a0bfa255",
       // Add a callback here to handle the payload sent by sdk
@@ -33,13 +35,18 @@ function App() {
   }, [])
 
 
-
+  const history = useHistory();
   // Sawo: 
   // OnSuccess Callback method
 
   const onSuccessLogin = async(payload) => {
     setUserPayload(payload);
     setIsLoggedIn(true);
+    console.log(payload);
+    // history.push('/');
+    localStorage.setItem('userId',payload.identifier);
+// console.log("email",payload.identifier )
+console.log(localStorage.getItem('userId'))
   }
 
   return (
@@ -74,4 +81,4 @@ function App() {
   );
 }
 
-export default App;
+export default LoginScreen;
