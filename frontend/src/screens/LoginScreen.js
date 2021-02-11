@@ -43,6 +43,7 @@ function LoginScreen() {
     setUserPayload(payload);
     setIsLoggedIn(true);
     console.log(payload);
+   
     // history.push('/');
     localStorage.setItem('userId',payload.identifier);
 // console.log("email",payload.identifier )
