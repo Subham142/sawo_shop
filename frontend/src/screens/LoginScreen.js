@@ -10,6 +10,7 @@ function LoginScreen() {
   // state values
   const [userPayload, setUserPayload] = useState({})
   const [isLoggedIn, setIsLoggedIn] = useState(false)
+  const [email, setEmail] = useState({})
 
   useEffect(() => {
 
@@ -36,6 +37,7 @@ function LoginScreen() {
 
 
   const history = useHistory();
+
   // Sawo: 
   // OnSuccess Callback method
 
@@ -44,11 +46,14 @@ function LoginScreen() {
     setIsLoggedIn(true);
     console.log(payload);
    
-    // history.push('/');
+    history.push('/');
     localStorage.setItem('userId',payload.identifier);
-// console.log("email",payload.identifier )
+console.log("email",payload.identifier )
 console.log(localStorage.getItem('userId'))
+window.location.reload(); 
   }
+  
+
 
   return (
     <React.Fragment>
